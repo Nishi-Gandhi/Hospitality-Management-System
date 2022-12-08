@@ -325,44 +325,44 @@ Select 'O40','ONLINE', CURRENT_TIMESTAMP, '14' , 'I22', '130' from dual;
 
 Insert into RM_OWNER.PAYMENTS(
 PAYMENT_ID,PAYMENT_TYPE,PAYMENT_STATUS,RESTAUARANT_ID,ORDER_ID)
-Select 'P1' 'CARD', 'PAID', 'O1' from dual union all
-Select 'P2' 'CASH', 'PAID', 'O2' from dual union all
-Select 'P2' 'CARD', 'PAID', 'O3'from dual union all
-Select 'P4' 'CARD', 'PAID', 'O4' from dual union all
-Select 'P5' 'CASH', 'PAID', 'O5' from dual union all
-Select 'P6' 'CASH', 'PAID', 'O6' from dual union all
-Select 'P7' 'CARD', 'PAID', 'O7' from dual union all
-Select 'P8' 'CASH', 'PAID', 'O8' from dual union all
-Select 'P9' 'CARD', 'PAID', 'O9' from dual union all
-Select 'P10', 'CARD', 'PAID', 'O10' from dual union all
-Select 'P11', 'CARD', 'PAID', 'O11' from dual union all
-Select 'P12', 'CARD', 'PAID', 'O12' from dual union all
-Select 'P13', 'CASH', 'PAID', 'O13' from dual union all
-Select 'P14', 'CARD', 'PAID', 'O14' from dual union all
-Select 'P15', 'CASH', 'PAID', 'O15' from dual union all
-Select 'P16', 'CARD', 'PAID', 'O16' from dual union all
-Select 'P17', 'CARD', 'PAID', 'O17' from dual union all
-Select 'P18', 'CASH', 'PAID', 'O18' from dual union all
-Select 'P19', 'CARD', 'PAID', 'O19' from dual union all
-Select 'P20', 'CARD', 'PAID', 'O20' from dual union all
-Select 'P21', 'CARD', 'PAID', 'O21' from dual union all
-Select 'P22', 'CARD', 'PAID', 'O22' from dual union all
-Select 'P23', 'CARD', 'PAID', 'O23' from dual union all
-Select 'P24', 'CASH', 'PAID', 'O24' from dual union all
-Select 'P25', 'CARD', 'PAID', 'O25' from dual union all
-Select 'P26', 'CARD', 'PAID', 'O26' from dual union all
-Select 'P27', 'CASH', 'PAID', 'O27' from dual union all
-Select 'P28', 'CASH', 'PAID', 'O28' from dual union all
-Select 'P29', 'CARD', 'PAID', 'O29' from dual union all
-Select 'P30', 'CARD', 'PAID', 'O30' from dual union all
-Select 'P31', 'CARD', 'PAID', 'O31' from dual union all
-Select 'P32', 'CASH', 'PAID', 'O32' from dual union all
-Select 'P33', 'CARD', 'PAID', 'O33' from dual union all
-Select 'P34', 'CASH', 'PAID', 'O34' from dual union all
-Select 'P35', 'CARD', 'PAID', 'O35' from dual union all
-Select 'P36', 'CARD', 'PAID', 'O36' from dual union all
-Select 'P37', 'CARD', 'PAID', 'O37' from dual union all
-Select 'P38', 'CASH', 'PAID', 'O38' from dual union all
-Select 'P39', 'CASH', 'PAID', 'O39' from dual union all
-Select 'P40', 'CARD', 'PAID', 'O40' from dual 
-;
+SELECT 'P1','CARD','PAID','O1','10' from dual union all
+SELECT 'P2','CARD','PAID','O2','03' from dual union all
+SELECT 'P3','CASH','PAID','O3','07' from dual union all
+SELECT 'P4','CASH','PAID','O4','09' from dual union all
+SELECT 'P5','CASH','PAID','O5','06' from dual union all
+SELECT 'P6','CASH','PAID','O6','11' from dual union all
+SELECT 'P7','CASH','PENDING','O7','14' from dual union all
+SELECT 'P8','CARD','PENDING','O8','12' from dual union all
+SELECT 'P9','CARD','PAID','O9','19' from dual union all
+SELECT 'P10','CASH','PAID','O10','20' from dual union all
+SELECT 'P11','CASH','PAID','O11','13' from dual union all
+SELECT 'P12','CARD','PAID','O12','18' from dual union all
+SELECT 'P13','CASH','PENDING','O13','16' from dual union all
+SELECT 'P14','CARD','PENDING','O14','04' from dual union all
+SELECT 'P15','CASH','PENDING','O15','08' from dual union all
+SELECT 'P16','CARD','PENDING','O16','14' from dual union all
+SELECT 'P17','CASH','PAID','O17','02' from dual union all
+SELECT 'P18','CARD','PAID','O18','07' from dual union all
+SELECT 'P19','CASH','PENDING','O19','08' from dual union all
+SELECT 'P20','CASH','PAID','O20','11' from dual union all
+SELECT 'P21','CASH','PENDING','O21','12' from dual union all
+SELECT 'P22','CASH','PAID','O22','2' from dual union all
+SELECT 'P23','CARD','PENDING','O23','1' from dual union all
+SELECT 'P24','CARD','PAID','O24','6' from dual union all
+SELECT 'P25','CARD','PAID','O25','7' from dual union all
+SELECT 'P26','CASH','PAID','O26','12' from dual union all
+SELECT 'P27','CASH','PAID','O27','3' from dual union all
+SELECT 'P28','CASH','PAID','O28','6' from dual union all
+SELECT 'P29','CASH','PAID','O29','4' from dual union all
+SELECT 'P30','CASH','PENDING','O30','3' from dual union all
+SELECT 'P31','CARD','PENDING','O31','13' from dual union all
+SELECT 'P32','CARD','PAID','O32','9' from dual union all
+SELECT 'P33','CASH','PENDING','O33','8' from dual union all
+SELECT 'P34','CASH','PENDING','O34','5' from dual union all
+SELECT 'P35','CARD','PAID','O35','6' from dual union all
+SELECT 'P36','CASH','PAID','O36','10' from dual union all
+SELECT 'P37','CASH','PAID','5','O37','11' from dual union all
+SELECT 'P38','CASH','PENDING','O38','12' from dual union all
+SELECT 'P39','CARD','PAID','20','O39','14' from dual union all
+SELECT 'P40','CARD','PENDING','O40','10' from dual;
+

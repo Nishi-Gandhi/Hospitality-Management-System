@@ -115,7 +115,7 @@ RATING_AVG_VALUE Varchar(5) Not Null
 Create Table ITEM (
 ITEM_ID Varchar(10) Not Null Primary Key,
 ITEM_NAME Varchar(25) Not Null,
-ITEM_QUANTITY Varchar(10) Not Null,
+ITEM_QUANTITY Varchar(10) ,
 ITEM_PRICE Varchar(10) Not Null,
 RESTAURANT_ID Varchar(10) REFERENCES RESTAURANT(RESTAURANT_ID));
 

@@ -1,0 +1,368 @@
+INSERT INTO RM_ADMIN.RESTAURANT (RESTAURANT_ID ,RESTAURANT_NAME ,RESTAURANT_LOCATION ,RESTAURANT_CONTACT ,
+RATING_AVG_VALUE )
+Select '01', 'ICHIRAKU RAMEN','MISSION HILL','6871684588','6' from dual union all
+Select '02', 'WINGZ N TINGZ','LOWER ROXBURY','697432156','8' from dual union all
+Select '03' , 'WOK N TALK','BROOKLINE','9766331590','7' from dual union all
+Select '04' ,'MUMBAI SPICE','HARVARD STREET','9087442179','10' from dual union all
+Select '05' ,'VEGGIE CRUST','CAMBRIDGE','8236495632','8' from dual union all
+Select '06', 'MCDONALDS', 'LOWER ROXBURY', '9973191188', '7' from dual union all
+Select '07', 'KFC', 'BROOKLINE', '4689173618', '10' from dual union all
+Select '08', 'TGIF', 'BRIGHAM CIRCLE', '1647228741', '8'from dual union all
+Select '09', 'BURGER KING', 'MISSION HILL', '8832198761', '6' from dual union all
+Select '10', 'POPEYES', 'BROOKLINE', '9712390042', '9' from dual union all
+Select '11', 'PANERA BREAD', 'BRIGHAM CIRCLE', '888221647','7' from dual union all
+Select '12', 'WALLASTON', 'HARVARD STREET', '9996612483', '8' from dual union all
+Select '13', 'FIVE GUYS', 'LOWER ROXBURY' ,'7761901829', '9' from dual union all
+Select '14', 'CHICK-FIL-A', 'MISSION HILL', '9856321345', '10' from dual;
+
+INSERT INTO RM_ADMIN.RATING
+(RATING_ID, RATING_COMMENTS, RATING_VALUE,RESTAURANT_ID)
+Select '0001', 'GOOD PLACE','10', '01' from dual union all
+Select '0002' , 'NICE FOOD','9', '01' from dual union all
+Select '0003' , 'GOOD AMBIENCE','8', '01' from dual union all
+Select '0004' , 'COULD IMPROVE SERVICES','6', '01' from dual union all 
+Select '0005' , 'GREAT STAFF','8', '01' from dual union all
+Select '0006' , 'GREAT EXPERIENCE','9', '01' from dual union all
+Select '0007' , 'DECENT AMBIENCE','7', '02' from dual union all
+Select '0008' , 'NOT A GOOD EXPERIENCE','6', '02' from dual union all
+Select '0009' , 'BEST FOOD EVER','9', '02' from dual union all
+Select '0010' , 'NICE SERVICE','7', '02' from dual union all
+Select '0011' , 'NEED BETTER OPTIONS','8', '02' from dual union all
+Select '0012' , 'GREAT OPTIONS','8', '03' from dual union all
+Select '0013' , 'BEST STAFF','9', '03' from dual union all
+Select '0014' , 'WAITER WAS GOOD','9', '03' from dual union all
+Select '0015' , 'WAITER WAS RUDE','4', '03' from dual union all
+Select '0016' , 'NOTHING GREAT','9', '03' from dual union all
+Select '0017' , 'FOOD TOOK TOO LONG','6', '03' from dual union all
+Select '0018' , 'FOOD CAME FAST','8', '04' from dual union all
+Select '0019' , 'FOOD WAS COLD','6', '04' from dual union all
+Select '0020' , 'BEST RESTAURANT','10', '04' from dual union all
+Select '0021' , 'AFFORDABLE RESTAURANT','7', '04' from dual union all
+Select '0022' , 'FOOD WAS STALE','5', '04' from dual union all
+Select '0023' , 'ORDER TOOK TIME','7', '04' from dual union all
+Select '0024' , 'IMPROVE OPTIONS','7', '04' from dual union all
+Select '0025' , 'MEAT WAS COOKED WELL','04', '07' from dual union all
+Select '0026' , 'FOOD WAS DECENT','8', '05' from dual union all
+Select '0027' , 'FOOD WASNT COOKED WELL','5', '05' from dual union all
+Select '0028' , 'VERY EXPENSIVE','7', '05' from dual union all
+Select '0029' , 'AMAMZING STAFF','8', '05' from dual union all
+Select '0030' , 'FOOD WAS LIKE HOME','7', '05' from dual union all
+Select '0031' , 'MANAGER WAS FRIENDLY','8', '06' from dual union all
+Select '0032' , 'STAFF WAS GOOD','8', '06' from dual union all
+Select '0033' , 'WORST RESTAURANT','5', '06' from dual union all
+Select '0034' , 'SIDES WERE TASTY','8', '06' from dual union all
+Select '0035' , 'DESSERTS WERE REALLY GOOD','9', '06' from dual union all
+Select '0036' , 'SPICY BUT GOOD FOOD','8', '06' from dual union all
+Select '0037' , 'WAITER WAS WELCOMING','7', '07' from dual union all
+Select '0038' , 'QUICK SERVICE','7', '07' from dual union all
+Select '0039' , 'GOOD SERVICE AND AVERAGE FOOD','8', '07' from dual union all
+Select '0040' , 'LONG WAITING TIME,GOOD FOOD','8','07' from dual 
+;
+
+
+
+INSERT INTO RM_ADMIN.ITEM 
+(ITEM_ID,ITEM_NAME,ITEM_QUANTITY,ITEM_PRICE,RESTAURANT_ID)
+Select 'I1', 'PEPPERONI PIZZA','10','30','01' from dual union all
+Select 'I2', 'BUTTER CHICKEN' ,'0', '30', '01'  from dual union all
+Select 'I3', ' VEG WHITE PASTA', '05' , '11' ,'01' from dual union all
+Select 'I4', 'SPAGHETTI','25' , '15' , '01' from dual union all
+Select 'I5', 'CHICKEN BURGER', '15','25', '01' from dual union all
+Select 'I6', 'BEEF BURGER', '10', '30', '02' from dual union all
+Select 'I7', 'BUTTER PANEER', '20', '12', '02' from dual union all
+Select 'I8', 'VEG BURGER', '0', '9', '02' from dual union all
+Select 'I9', 'PORK BURGER', '30', '31', '02' from dual union all
+Select 'I10', 'CHEESE PIZZA', '10', '18', '02' from dual union all
+Select 'I11', 'GARLIC BREAD', '35', '08', '02' from dual union all
+Select 'I12', 'MISO RAMEN', '20', '20', '03' from dual union all
+Select 'I13','CHICKEN BIRYANI', '30', '26', '03' from dual union all
+Select 'I14','CHICKEN ONION RICE', '30', '07', '03' from dual union all
+Select 'I15' ,'CHICKEN WINGS', '10', '16', '03' from dual union all
+Select 'I16' ,'CHICKEN TENDERS', '25', '20', '03' from dual union all
+Select 'I17' ,'HOT CHICKEN SANDWICH', '30', '14', '04' from dual union all
+Select 'I18' ,'CHICKEN SANDWICH', '25', '14', '04' from dual union all
+Select 'I19' ,'VEG SANDWICH', '20', '15', '05' from dual union all
+Select 'I20' ,'PORK SANDWICH', '30', '22', '05' from dual union all
+Select 'I21' ,'BREAKFAST SANDWICH', '25', '25', '05' from dual union all
+Select 'I22' ,'FARMHOUSE PIZZA', '30', '30', '05' from dual union all
+Select 'I23' ,'CHICKEN SALAMI SANDWICH', '35', '34', '06' from dual union all
+Select 'I24' ,'PEPPERONI SANDWICH', '40', '35', '06' from dual union all
+Select 'I25' ,'BACON STRIPS', '50', '19', '06' from dual union all
+Select 'I26' ,'COLESLAW', '35', '14', '06' from dual union all
+Select 'I27' ,'TANTAN RAMEN', '40', '40', '07' from dual union all
+Select 'I28' ,'PANEER TIKKA', '15', '22', '07' from dual union all
+Select 'I29' ,'VEG DAL RICE', '10', '14', '07' from dual union all
+Select 'I30' ,'CHICKEN ORANGE RICE', '30', '28', '07' from dual union all
+Select 'I31' ,'CHICKEN ORANGE NOODLES', '35', '29', '08' from dual union all
+Select 'I32' ,'FISH N CHIPS', '25', '24', '08' from dual union all
+Select 'I34' ,'BATTERED FISH', '20', '22', '08' from dual union all
+Select 'I35' ,'GRILLED CHICKEN', '15', '27', '08' from dual union all
+Select 'I36' ,'BBQ CHICKEN PIZZA', '25', '34', '08' from dual union all
+Select 'I37' ,'BBQ CHICKEN WINGS', '20', '29', '08' from dual union all
+Select 'I38' ,'ALFREDO PASTA', '30', '4', '09' from dual union all
+Select 'I39' ,'PENNE PASTA', '25', '23', '09' from dual union all
+Select 'I40' ,'CHICKEN HOTDOG', '10', '16','09' from dual union all
+Select 'I41' ,'PORK HOTDOG', '20', '20', '10' from dual union all
+Select 'I42' ,'BEEF HOTDOG', '0', '24', '10' from dual union all
+Select 'I43' ,'GRILLED SHRIMP', '20', '13', '10' from dual union all
+Select 'I44' ,'FRIED SHRIMP', '0', '25', '10' from dual union all
+Select 'I45' ,'VEG TADKA', '5', '15', '11' from dual union all
+Select 'I46' ,'VEG RED PASTA', '20', '15', '11' from dual union all
+Select 'I47' ,'CHICKEN TADKA', '20', '15', '11' from dual union all
+Select 'I48' ,'HOT CHICKEN WINGS', '15', '10', '12' from dual union all
+Select 'I49' ,'VEG HOTDOG', '20', '10', '12' from dual union all
+Select 'I50' ,'ONION CURRY', '10', '20', '12' from dual union all
+Select 'I51' ,'LAMB VINDALOO', '10', '31', '12' from dual union all
+Select 'I52' ,'BEEF STEAK', '10', '34', '13' from dual union all
+Select 'I53' ,'CHICKEN GLAZED PIECES', '15', '25', '13' from dual union all
+Select 'I54' ,'SPICY RAMEN', '25', '15', '13' from dual union all
+Select 'I55' , 'VEG RAMEN', '15', '21', '13' from dual union all
+Select 'I56' ,'CHICKEN TERIYAKI RICE', '20', '26', '13' from dual union all
+Select 'I57' ,'CHICKEN TERIYAKI NOODLES', '', '24', '13' from dual union all
+Select 'I58' ,'CHICKEN VINDALOO', '10', '22', '14' from dual union all
+Select 'I59' ,'BEAST CHCKEN BURGER', '20', '15', '14' from dual union all
+Select 'I60' ,'BREADROLL', '30', '8', '14' from dual union all
+Select 'I61' ,'EGG ROLL', '40', '10', '14' from dual;
+SELECT * from RM_ADMIN.rating_details; 
+
+INSERT  INTO RM_ADMIN.EMPLOYEE (EMPLOYEE_ID,EMPLOYEE_NAME,EMPLOYEE_CONTACT,EMPLOYEE_POSITION, EMPLOYEE_ADDRESS,RESTAURANT_ID)
+Select '001','PEP GUARDIOLA','9821356478','MANAGER','MISSION MAIN', '01' from dual union all
+Select '002','JOHN SNOW','9821356478','CASHIER','MISSION MAIN', '01' from dual union all
+Select '003', 'BRAN STARK', '9821356478','WAITER','MISSION MAIN', '01' from dual union all
+Select '004', 'BEN GELLER', '8374658903', 'HEAD CHEF', 'MISSION MAIN', '01' from dual union all
+Select '005','NED STARK','9821356478','SOUS CHEF','MISSION MAIN', '01' from dual union all
+Select '006', 'LIONEL MESSI','8774831432','MANAGER','ROXBURY CROSSING', '02' from dual union all
+Select '007', 'LUIS SUAREZI','9823361345','WAITER','WALTHAM', '02' from dual union all
+Select '008', 'TONY KROSS','8945361567','CASHIER','LOWEL', '02' from dual union all
+Select '009', 'ROBERT LAWENDOSKI','8795361890','HEAD CHEF','LOWEL', '02' from dual union all
+Select '010', 'CRISTIANO RONALDO','5567456111','HEAD CHEF', 'MISSION MAIN'  , '03' from dual union all
+Select '011', 'NEYMAR JR','6521874982','WAITER','BROOKLINE', '03' from dual union all
+Select '012','RAMESH SURESH','7789326647','CASHIER','ALSTON', '03' from dual union all
+Select '013','JOSE MOURINHO','9821356478','MANAGER','BROOKLINE', '03' from dual union all
+Select '014', 'ROBIN MOSBY' , '9928368098' , 'SOUS CHEF', 'MISSION MAIN' , '03' from dual union all
+Select '015' , 'MONICA GELLER' , '8765740987', 'HEAD CHEF', 'BROOKLINE' , '04' from dual union all
+Select '016' , 'BARNEY STINSON' , '8356846456', 'WAITER', 'WATERTOWN' , '04' from dual union all
+Select '017','RAMESH SURESH','9846759937','CASHIER','BROOKLINE', '04' from dual union all
+Select '018', 'FRANKY SMITH','0284758948','MANAGER','BROOKLINE', '04' from dual union all
+Select '019', 'KATE MILLER','6748976541','HEAD CHEF', 'MISSION MAIN'  , '05' from dual union all
+Select '020', 'JESSICA BROWN','6521653782','WAITER','BROOKLINE', '05' from dual union all
+Select '021','BENJAMIN DAVIS','7789326647','CASHIER','ALSTON', '05' from dual union all
+Select '022','RACHEL ZANE','9821356478','MANAGER','BROOKLINE', '05' from dual union all
+Select '023', 'HARVEY SPECTER','9724398222','HEAD CHEF', 'MISSION MAIN'  , '06' from dual union all
+Select '024', 'MIKE ROSS','9134574982','WAITER','CAMBRIDGE', '06' from dual union all
+Select '025','RAMESH SURESH','7789392134','ASHIER','ALSTON', '06' from dual union all
+Select '026','JOSE MOURINHO','9821356478','MANAGER','QUINCY', '06' from dual union all
+Select '027', 'KATE WILLIAMS','9987698111','HEAD CHEF', 'MISSION MAIN'  , '07' from dual union all
+Select '028', 'DANIEL HARDMAN','9850330688','WAITER','BROOKLINE', '07' from dual union all
+Select '029','EVAN SMITH','9645438890','CASHIER','ALSTON', '07' from dual union all
+Select '030','HENRY GERAD','9654566790','MANAGER','BROOKLINE', '07' from dual union all
+Select '031', 'ARCHIE GRACIA','9871234576','HEAD CHEF', 'HEATH STREET'  , '08' from dual union all
+Select '032', 'CHANDLER BING','9877667884','WAITER','BOYLSTON', '08' from dual union all
+Select '033','JOEY TRIBBIANI','9665776890','CASHIER','UNION SQUARE', '08' from dual union all
+Select '034','LOLA JENSON','9445333689','MANAGER','MISSION MAIN', '08' from dual union all
+Select '035', 'STEVE ROGERS','5567554879','HEAD CHEF', 'COPLEY'  , '09' from dual union all
+Select '036', 'PETER PARKER','9547865889','WAITER','HUNTINGTON AVE', '09' from dual union all
+Select '037','CHRIS EVANS','9619826268','CASHIER','HYNNES', '09' from dual union all
+Select '038','TONY STARK','9556788679','MANAGER','LONGWOOD', '09' from dual union all
+Select '039', 'SMITH EVANS','8615432345','SOUS CHEF', 'COPLEY'  , '09' from dual union all
+Select '040', 'TRACY MILLER','8797797787','WAITER','HUNTINGTON AVE', '09' from dual union all
+Select '041','CHRIS EVANS','9554667890','CASHIER','HYNNES', '09' from dual union all
+Select '042','TONY STARK','9764578650','MANAGER','LONGWOOD', '09' from dual union all
+Select '043', 'ALAN HARPER','8876547890','HEAD CHEF', 'WAKEFIELD'  , '10' from dual union all
+Select '044', 'CHARLIE SHEEN','981405567','WAITER','JAMAICAN PLAINS', '10' from dual union all
+Select '045','JAKE WILLAIMS','9467534348','CASHIER','ROXBURY', '10' from dual union all
+Select '046','WILL SMITH','6657889000','MANAGER','DORCHESTER', '10' from dual union all
+Select '047', 'TOM CRUISE','9654478990','SOUS CHEF', 'NEWTON'  , '10' from dual union all
+Select '048', 'ALAN HARPER','9825398111','HEAD CHEF', 'WAKEFIELD'  , '11' from dual union all
+Select '049', 'CHARLIE SHEEN','9554677800','WAITER','JAMAICAN PLAINS', '11' from dual union all
+Select '050','JAKE WILLAIMS','9546678900','CASHIER','ROXBURY', '11' from dual union all
+Select '051','WILL SMITH','9567789709','MANAGER','DORCHESTER', '11' from dual union all
+Select '052', 'TOM CRUISE','9546678998','SOUS CHEF', 'NEWTON'  , '11' from dual union all
+Select '053', 'HARSHAD MEHTA','7728398121','HEAD CHEF', 'LOWEL' , '12' from dual union all
+Select '054', 'LIAM PAYNE','931203306','WAITER','ALSTON', '12' from dual union all
+Select '055','HARRY STYLES','9345654457','CASHIER','SOMERVILLE', '12' from dual union all
+Select '056','ZAYN MALIK','9622889087','MANAGER','DORCHESTER', '12' from dual union all
+Select '057', 'NIALL HORAN','9833227788','SOUS CHEF', 'NEWTON'  , '12' from dual union all
+Select '058', 'NEIL MAGO','4728398111','HEAD CHEF', 'WAKEFIELD'  , '13' from dual union all
+Select '059', 'LIAM PAYNE','9224411880','WAITER','DEDHAM', '13' from dual union all
+Select '060','HARRY STYLES','9334455009','CASHIER','ROXBURY', '13' from dual union all
+Select '061','ZAYN MALIK','9222266660','MANAGER','WESTWOOD', '13' from dual union all
+Select '062', 'NIALL HORAN','9555577770','SOUS CHEF', 'NEWTON'  , '13' from dual union all
+Select '063', 'JILL LOCKHART','9777788889','HEAD CHEF', 'LEXINGTON','14' from dual union all
+Select '064', 'ADAM LEVIEN','9666677779','WAITER','NORWOOD', '14' from dual union all
+Select '065','ELLENA DCRUZ','9659828269','CASHIER','WELLESLEY', '14' from dual union all
+Select '066','JACK HARLOW','9444455559','MANAGER','DORCHESTER', '14' from dual union all
+Select '067', 'TOM HARDY','9333344445','SOUS CHEF', 'NEWTON'  , '14' from dual;
+
+INSERT INTO RM_ADMIN.ORDER_DETAILS(
+ORDER_DESC_ID,ITEMS)
+Select '91' ,'PEPPERONI PIZZA BUTTER CHICKEN VEG WHITE PASTA' from dual union all
+Select '92', 'BEEF BURGER BUTTER PANEER PORK BURGER' from dual union all
+Select  '93', 'CHEESE PIZZA GARLIC BREAD'from dual union all
+Select '94', 'BUTTER CHICKEN BUTTER PANEER' from dual union all
+Select '95', 'BUTTER PANEER PORK BURGER' from dual union all
+Select '96', 'MISO RAMEN CHICKEN BIRYANI' from dual union all
+Select '97', 'CHICKEN ONION RICE' from dual union all
+Select '98', 'HOT CHICKEN SANDWICH CHICKEN SANDWICH' from dual union all
+Select '99', 'FARMHOUSE PIZZA FARMHOUSE PIZZA' from dual union all
+Select '100', 'FARMHOUSE PIZZA CHICKEN SALAMI SANDWICH' from dual union all
+Select '101', 'TANTAN RAMEN VEG DAL RICE' from dual union all
+Select '102', 'CHICKEN ORANGE RICE CHICKEN ORANGE NOODLES' from dual union all
+Select '103', 'FISH N CHIPS BATTERED FISH' from dual union all
+Select '104', 'GRILLED CHICKEN BBQ CHICKEN PIZZA' from dual union all
+Select '105', 'CHICKEN HOTDOG PORK HOTDOG' from dual union all
+Select '106', 'GRILLED SHRIMP FRIED SHRIMP' from dual union all
+Select '107', 'VEG HOTDOG ONION CURRY' from dual union all
+Select '108', 'SPICY RAMEN CHICKEN GLAZED PIECES' from dual union all
+Select '109', 'SPICY RAMEN VEG RAMEN' from dual union all
+Select '110', 'CHICKEN TERIYAKI RICE CHICKEN TERIYAKI NOODLES' from dual union all
+Select '111', 'EGG ROLL BREADROLL' from dual union all
+Select '112', 'BBQ CHICKEN PIZZA BBQ CHICKEN WINGS' from dual union all
+Select '113', 'GRILLED CHICKEN BATTERED FISH FISH N CHIPS' from dual union all
+Select '114', 'BEEF STEAK LAMB VINDALOO' from dual union all
+Select '115', 'BEAST CHICKEN BURGER EGGROLL' from dual union all
+Select '116', 'BACON STRIPS COLESLAW' from dual union all
+Select '117', 'VEG DAL RICE CHICKEN ORANGE RICE' from dual union all
+Select '118', 'CHICKEN ONION RICE CHICKEN WINGS CHICKEN TENDERS' from dual union all
+Select '119', 'CHICKEN SALAMI SANDWICH PEPPERONI SANDWICH' from dual union all
+Select '120', 'CHICKEN HOTDOG BEEF HOTDOG PORK HOTDOG' from dual union all
+Select '121', 'MISO RAMEN CHICKEN BIRYANI CHICKEN WINGS' from dual union all
+Select '122', 'BREAKFAST SANDWICH FARMHOUSE PIZZA' from dual union all
+Select '123', 'PANEER TIKKA VEG DAL RICE' from dual union all
+Select '124', 'ALFREDO PASTA PENNE PASTA CHICKEN HOTDOG' from dual union all
+Select '125', 'VEG TADKA VEG RED PASTA' from dual union all
+Select '126', 'CHICKEN TERIYAKI NOODLES' from dual union all
+Select '127', 'EGG ROLL EGG ROLL EGG ROLL' from dual union all
+Select '128','BUTTER CHICKEN SPAGHETTI' from dual union all
+Select '129', 'BEEF BURGER PORK BURGER' from dual union all
+Select '130', 'HOT CHICKEN SANDWICH CHICKEN TENDERS'from dual;
+
+Insert into RM_ADMIN.USERS
+(USER_ID,USER_NAME,USER_CONTACT)
+Select 'U1','SURESH', '9744557811' from dual union all
+Select 'U2','RAM', '7833598611'  from dual union all
+Select 'U3','SHYAM','7632987612' from dual union all
+Select 'U4','ANIKET','6512981278' from dual union all
+Select 'U5','ISHAN', '7612211166'  from dual union all
+Select 'U6','JAY', '7552215165'  from dual union all
+Select 'U7','DEVANSH','9986388100'  from dual union all
+Select 'U8','KARTIK', '7736491192'  from dual union all
+Select 'U9','NISHI', '7613316786'  from dual union all
+Select 'U10', 'AYUSH', '0222271289'  from dual union all
+Select 'U11', 'TANVI', '9008765421'  from dual union all
+Select 'U12', 'SHRUTI', '0076122116'  from dual union all
+Select 'U13', 'MADHU', '9123456001'  from dual union all
+Select 'U14', 'ASHUTOSH', '7610017281'  from dual union all
+Select 'U15', 'SHIVANI', '9102086191'  from dual union all
+Select 'U16', 'ANIRUDH', '8201826891'  from dual union all
+Select 'U17', 'RITVIK', '9023219769'  from dual union all
+Select 'U18', 'ABHISHEK', '9177612222'  from dual union all
+Select 'U19', 'ABHIJEET', '9812938110'  from dual union all
+Select 'U20', 'SARAH', '1236919920'  from dual union all
+Select 'U21', 'CHARLES', '9112931929'  from dual union all
+Select 'U22', 'CARLOS', '6666291729'  from dual union all
+Select 'U23', 'NICK', '9128429004'  from dual union all
+Select 'U24', 'CHARLIE', '2938190032'  from dual union all
+Select 'U25', 'DAVID', '7798192401'  from dual union all
+Select 'U26', 'MICHAEL', '8910283901'  from dual union all
+Select 'U27', 'GABRIEL', '1892028110'  from dual union all
+Select 'U28', 'JOAO', '7610293110'  from dual union all
+Select 'U29', 'RAFAEL', '7612211166'  from dual union all
+Select 'U31', 'LEO', '0221998190'  from dual union all
+Select 'U32', 'SALMAN', '9811029899'  from dual union all
+Select 'U33', 'SAIF', '9010980022'  from dual union all
+Select 'U34', 'HIMESH', '9010310234'  from dual union all
+Select 'U35', 'HARRY', '8021345780'  from dual union all
+Select 'U36', 'POTTER', '9076219810'  from dual union all
+Select 'U37', 'AGUERO', '9490121998'  from dual union all
+Select 'U38', 'CHRIS', '9980200111'  from dual union all
+Select 'U39', 'EDEN', '529098745'  from dual union all
+Select 'U40', 'KEVIN', '4125698701'  from dual union all
+Select 'U41','SURESH', '9744557811'  from dual;
+
+Insert into RM_ADMIN.ORDERS(
+ORDERS_ID,ORDERS_TYPE,ORDERS_PLACED_TIME,RESTAURANT_ID,ITEM_ID,ORDER_DESC_ID)
+Select 'O1','ONLINE', CURRENT_TIMESTAMP,  '01' , 'I12', '91' from dual union all
+Select 'O2','OFFLINE', CURRENT_TIMESTAMP,'01' , 'I13',  '92' from dual union all
+Select 'O3','OFFLINE', CURRENT_TIMESTAMP,'02' , 'I1', '93' from dual union all
+Select 'O4','ONLINE', CURRENT_TIMESTAMP, '02' , 'I44', '94' from dual union all
+Select 'O5','OFFLINE',CURRENT_TIMESTAMP, '03' , 'I2', '95' from dual union all
+Select 'O5','OFFLINE', CURRENT_TIMESTAMP, '03' , 'I35', '96' from dual union all
+Select 'O6','OFFLINE', CURRENT_TIMESTAMP, '04' , 'I32', '97' from dual union all
+Select 'O7','OFFLINE', CURRENT_TIMESTAMP, '04' , 'I7', '98' from dual union all
+Select 'O8','OFFLINE', CURRENT_TIMESTAMP, '05' , 'I3', '99' from dual union all
+Select 'O9','OFFLINE', CURRENT_TIMESTAMP, '05' , 'I10', '100' from dual union all
+Select 'O10','OFFLINE', CURRENT_TIMESTAMP, '06' , 'I36', '101' from dual union all
+Select 'O11','OFFLINE', CURRENT_TIMESTAMP, '06' , 'I61', '102' from dual union all
+Select 'O12','OFFLINE', CURRENT_TIMESTAMP, '07' , 'I5', '103' from dual union all
+Select 'O13','OFFLINE', CURRENT_TIMESTAMP, '07' , 'I6', '104' from dual union all
+Select 'O14','ONLINE', CURRENT_TIMESTAMP, '08' , 'I14', '105' from dual union all
+Select 'O15','OFFLINE', CURRENT_TIMESTAMP, '08' , 'I43', '106' from dual union all
+Select 'O16','ONLINE', CURRENT_TIMESTAMP, '09' , 'I40', '107' from dual union all
+Select 'O17','ONLINE', CURRENT_TIMESTAMP, '09' , 'I56', '108' from dual union all
+Select 'O18','OFFLINE', CURRENT_TIMESTAMP, '10' , 'I8', '109' from dual union all
+Select 'O19','ONLINE', CURRENT_TIMESTAMP, '10' , 'I17', '110' from dual union all
+Select 'O20','ONLINE', CURRENT_TIMESTAMP, '11' , 'I24', '111' from dual union all
+Select 'O21','ONLINE', CURRENT_TIMESTAMP, '11' , 'I47', '112' from dual union all
+Select 'O22','ONLINE', CURRENT_TIMESTAMP, '12' , 'I26', '113' from dual union all
+Select 'O23','OFFLINE', CURRENT_TIMESTAMP, '12' , 'I11', '114' from dual union all
+Select 'O24','OFFLINE', CURRENT_TIMESTAMP, '13' , 'I52', '115' from dual union all
+Select 'O25','OFFLINE', CURRENT_TIMESTAMP, '13' , 'I34', '116' from dual union all
+Select 'O26','ONLINE', CURRENT_TIMESTAMP, '14' , 'I22', '117' from dual union all
+Select 'O27','OFFLINE',CURRENT_TIMESTAMP, '14' , 'I22', '118' from dual union all
+Select 'O28','OFFLINE',CURRENT_TIMESTAMP, '03' , 'I35', '119' from dual union all
+Select 'O29','ONLINE', CURRENT_TIMESTAMP, '03' , 'I2', '120' from dual union all
+Select 'O31','ONLINE', CURRENT_TIMESTAMP, '01' , 'I12', '121' from dual union all
+Select 'O32','ONLINE', CURRENT_TIMESTAMP, '01' , 'I13', '122' from dual union all
+Select 'O33','ONLINE', CURRENT_TIMESTAMP, '09' , 'I40', '123' from dual union all
+Select 'O34','ONLINE', CURRENT_TIMESTAMP, '09' , 'I56', '124' from dual union all
+Select 'O35','ONLINE', CURRENT_TIMESTAMP, '10' , 'I8', '125' from dual union all
+Select 'O36','ONLINE', CURRENT_TIMESTAMP, '10' , 'I7', '126' from dual union all
+Select 'O37','ONLINE', CURRENT_TIMESTAMP, '11' , 'I7', '127' from dual union all
+Select 'O38','ONLINE', CURRENT_TIMESTAMP, '12' , 'I26', '128' from dual union all
+Select 'O39','ONLINE', CURRENT_TIMESTAMP, '12' , 'I11', '129' from dual union all
+Select 'O40','ONLINE', CURRENT_TIMESTAMP, '14' , 'I22', '130' from dual;
+
+Insert into RM_OWNER.PAYMENTS(
+PAYMENT_ID,PAYMENT_TYPE,PAYMENT_STATUS,RESTAUARANT_ID,ORDER_ID)
+Select 'P1' 'CARD', 'PAID', 'O1' from dual union all
+Select 'P2' 'CASH', 'PAID', 'O2' from dual union all
+Select 'P2' 'CARD', 'PAID', 'O3'from dual union all
+Select 'P4' 'CARD', 'PAID', 'O4' from dual union all
+Select 'P5' 'CASH', 'PAID', 'O5' from dual union all
+Select 'P6' 'CASH', 'PAID', 'O6' from dual union all
+Select 'P7' 'CARD', 'PAID', 'O7' from dual union all
+Select 'P8' 'CASH', 'PAID', 'O8' from dual union all
+Select 'P9' 'CARD', 'PAID', 'O9' from dual union all
+Select 'P10', 'CARD', 'PAID', 'O10' from dual union all
+Select 'P11', 'CARD', 'PAID', 'O11' from dual union all
+Select 'P12', 'CARD', 'PAID', 'O12' from dual union all
+Select 'P13', 'CASH', 'PAID', 'O13' from dual union all
+Select 'P14', 'CARD', 'PAID', 'O14' from dual union all
+Select 'P15', 'CASH', 'PAID', 'O15' from dual union all
+Select 'P16', 'CARD', 'PAID', 'O16' from dual union all
+Select 'P17', 'CARD', 'PAID', 'O17' from dual union all
+Select 'P18', 'CASH', 'PAID', 'O18' from dual union all
+Select 'P19', 'CARD', 'PAID', 'O19' from dual union all
+Select 'P20', 'CARD', 'PAID', 'O20' from dual union all
+Select 'P21', 'CARD', 'PAID', 'O21' from dual union all
+Select 'P22', 'CARD', 'PAID', 'O22' from dual union all
+Select 'P23', 'CARD', 'PAID', 'O23' from dual union all
+Select 'P24', 'CASH', 'PAID', 'O24' from dual union all
+Select 'P25', 'CARD', 'PAID', 'O25' from dual union all
+Select 'P26', 'CARD', 'PAID', 'O26' from dual union all
+Select 'P27', 'CASH', 'PAID', 'O27' from dual union all
+Select 'P28', 'CASH', 'PAID', 'O28' from dual union all
+Select 'P29', 'CARD', 'PAID', 'O29' from dual union all
+Select 'P30', 'CARD', 'PAID', 'O30' from dual union all
+Select 'P31', 'CARD', 'PAID', 'O31' from dual union all
+Select 'P32', 'CASH', 'PAID', 'O32' from dual union all
+Select 'P33', 'CARD', 'PAID', 'O33' from dual union all
+Select 'P34', 'CASH', 'PAID', 'O34' from dual union all
+Select 'P35', 'CARD', 'PAID', 'O35' from dual union all
+Select 'P36', 'CARD', 'PAID', 'O36' from dual union all
+Select 'P37', 'CARD', 'PAID', 'O37' from dual union all
+Select 'P38', 'CASH', 'PAID', 'O38' from dual union all
+Select 'P39', 'CASH', 'PAID', 'O39' from dual union all
+Select 'P40', 'CARD', 'PAID', 'O40' from dual 
+;

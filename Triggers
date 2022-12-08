@@ -1,0 +1,57 @@
+Set Serveroutput on;
+-- Trigger for deleting the employee information
+CREATE OR REPLACE TRIGGER delete_emp_info
+After DELETE
+ON RM_ADMIN.EMPLOYEE
+FOR EACH ROW
+Enable
+DECLARE
+v_user varchar2(25);
+BEGIN
+Select user into v_user from dual;
+DBMS_OUTPUT.PUT_LINE('Employee information has been deleted by '||v_user);
+EXCEPTION
+WHEN Others Then
+dbms_output.put_line(' Employee information has not been deleted');
+END;
+/
+
+Create or Replace procedure trigger_test_Insert
+Is
+Begin
+EXECUTE Immediate  q'!Insert into ORDERS values('O41','ONLINE', CURRENT_TIMESTAMP,  '01' , 'I11', '93','U1')!';
+Commit;
+Exception
+When others then
+Dbms_output.put_line('Data not inserted');
+End;
+/
+
+
+
+Exec Trigger_test_Insert();
+
+
+
+Select * from RM_ADMIN.ORDERS;
+
+
+
+Create or Replace procedure trigger_test_Delete
+Is
+Begin
+EXECUTE Immediate  q'!Delete from ITEM where ITEM_ID =I20 AND ITEM_PRICE=22!';
+Commit;
+Exception
+When others then
+Dbms_output.put_line('Data not deleted');
+End;
+/
+
+
+
+EXEC trigger_test_delete();
+
+
+
+Select * from ITEM;

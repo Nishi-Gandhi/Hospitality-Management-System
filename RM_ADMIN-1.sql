@@ -100,7 +100,7 @@ END;
 
 Create Table ORDER_DETAILS( 
 ORDER_DESC_ID Varchar(20)  Not Null PRIMARY KEY, 
-ITEMS Varchar(50)
+ITEMS Varchar(150)
 );
 Create Table RESTAURANT( 
 RESTAURANT_ID Varchar(10)  Not Null PRIMARY KEY, 

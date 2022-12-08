@@ -1,0 +1,70 @@
+-- Packages for inserting procedure
+--Package Body
+Create or Replace Package Body pkg_Insert_Data IS
+
+
+--/
+
+
+
+-- RESTAURANT Insertion Procedure
+
+
+
+--CREATE or Replace
+Procedure Insert_rest( RESTAURANT_ID in Varchar, 
+RESTAURANT_NAME in Varchar) IS
+Begin
+INSERT into RESTAURANT(RESTAURANT_ID,RESTAURANT_NAME) Values(RESTAURANT_ID,RESTAURANT_NAME);
+commit;
+dbms_output.put_line('RESTAURANT added!');
+exception
+when dup_val_on_index then
+dbms_output.put_line('Duplicate Value ');
+when others then
+dbms_output.put_line('Error Found. Check your input');
+end;
+--/
+
+
+
+-- USER Insertion Procedure
+
+
+
+--Create or Replace
+Procedure Insert_user( USER_ID in VARCHAR, USER_NAME in VARCHAR) IS
+Begin
+INSERT into USERS(USER_ID,USER_NAME) Values(USER_ID,USER_ID);
+commit;
+dbms_output.put_line('USER added!');
+exception
+when dup_val_on_index then
+dbms_output.put_line('Duplicate Value ');
+when others then
+dbms_output.put_line('Error Found. Check your input');
+end;
+--/
+
+-- EMPLOYEE Insertion Procedure
+
+
+--Create or Replace
+procedure Insert_EMPLOYEE(EMPLOYEE_ID in VARCHAR, EMPLOYEE_NAME in varchar, RESTAURANT_ID IN VARCHAR) is
+ RESTAURANT_ID_COUNTER RESTAURANT.RESTAURANT_ID%type;
+
+
+begin
+
+
+insert into EMPLOYEE(EMPLOYEE_ID, EMPLOYEE_NAME, RESTAURANT_ID) values (EMPLOYEE_ID, EMPLOYEE_NAME, RESTAURANT_ID);
+commit;
+
+
+EXCEPTION
+when dup_val_on_index then
+dbms_output.put_line('Duplicate row');
+when Others then
+dbms_output.put_line('Please check your input. Error found :');
+end Insert_EMPLOYEE;
+--/
